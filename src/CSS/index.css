@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 0.8rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+img{
+  width:128px;
+  height:128px;
+}
+
+/* card flipping */
+.flipCard {
+  background-color: transparent;
+  flex: 1 1 30%;
+  height: 150px;
+  width:150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin:10px;
+  display:block;
+  word-wrap:break-word;
+  padding: 3px;
+}
+
+.flipCardInner { /*flipper*/
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flipCard .flipCardBack {
+  background: #3498db;
+  transform: rotateY(180deg);
+ }
+
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.flipCardFront{
+  background-color: #bbb;
+  color: black;
+}
+
+.flipCardBack{
+  background-color: dodgerblue;
+  color: white;
+}
+.on {
+  transform: rotateY(-180deg);
+}
+
+.off {
+  transform: rotateY(0deg);
+}
+/* After complete of dack of cards a winner screen */
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden(none) by default */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(200, 211, 150, 200); 
+  z-index: 2; 
+  cursor: pointer; 
+}
+
+.cardView
+{
+  border-radius: 5px;
+  border: 1px solid paleturquoise;
+  padding:5px;
+  margin:5px;
+}
+.answer{
+  margin-top:8px;
+}
+
+.delete,.edit,.form
+{
+  border-radius: 5px;
+  border: 1px solid paleturquoise;
+  padding:3px;
+  margin-right: 5px;
+}
+.cardView{
+  display:block;
+  max-width:250px;
+  word-wrap:break-word;
+}
+.form{
+  display:block;
+  width:300px;
+  word-wrap:break-word;
+}
+textarea{
+  display:block;
+  width:250px;
+  word-wrap:break-word;
+}
+.msg{
+  color:red;
+}
+.flipCardFront{
+  background-color: rgb(226, 218, 218)
+}
+.flipCardBack{
+background-color: paleturquoise;
+}
+.newCard,.revealAnswer,.yes,.no{
+  border-radius: 3px;
+  margin: 0 3px;
+}
