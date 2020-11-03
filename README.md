@@ -19,5 +19,5 @@
 <li>Click on button delete will remove the card from the list and mockapi</li>
 </ul>
 
-![](src/flashcards2.png)<br><br>
-![](src/flashcards3.png)
+![](src/Assets/flashcards2.png)<br><br>
+![](src/Assets/flashcards3.png)
